@@ -1,0 +1,24 @@
+{
+    "name": "smartsheet-todo",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "nodemon server.js --ignore client/",
+        "client": "babel-node start-client.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Michael Park <thatmichaelpark@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "smartsheet": "^0.1.0",
+        "socket.io": "^1.7.3"
+    },
+    "devDependencies": {
+        "concurrently": "^3.4.0"
+    }
+}
