@@ -1,6 +1,5 @@
 /* global socket */
 import React, {Component} from 'react';
-import './App.css';
 
 class App extends Component {
     constructor() {
@@ -85,13 +84,13 @@ class App extends Component {
     }
     render() {
         return (
-            <div className="todo">
+            <div style={{textAlign: 'center'}}>
                 <h1>To Do</h1>
 
                 {this.state.todos
                     .filter(todo => !this.state.hideCompleted || !todo.cells[2].value)
                     .map(todo =>
-                        <div className='row' key={todo.id}>
+                        <div key={todo.id}>
                             <span
                                 style={{
                                     textDecoration: `${todo.cells[2].value ? 'line-through' : ''}`
